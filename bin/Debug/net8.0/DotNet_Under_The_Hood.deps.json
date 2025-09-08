@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "DotNet_Under_The_Hood/1.0.0": {
+        "runtime": {
+          "DotNet_Under_The_Hood.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DotNet_Under_The_Hood/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
