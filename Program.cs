@@ -1,29 +1,21 @@
-﻿int number = 5;
+﻿var variousObjects = new List<object> {
+  1,
+  1.5m,
+  new DateTime(2024, 6, 1),
+  "hello",
+  new Person {Name = "Anna", Age = 61}
+};
 
-AddOneToNumber(ref number);
-
-System.Console.WriteLine(number);
-
-MethodWithOutParamater(out int otherNumber);
-System.Console.WriteLine($"Other number is {otherNumber}");
-
-var list = new List<int> { 1, 2, 3 };
-AddOneToList(ref list);
-System.Console.WriteLine(string.Join(", ", list));
+foreach (var item in variousObjects)
+{
+  System.Console.WriteLine(item.GetType().Name);
+  System.Console.WriteLine(item);
+}
 
 Console.ReadKey();
 
-void AddOneToList(ref List<int> numbers)
+class Person
 {
-  numbers = null;
-}
-
-void MethodWithOutParamater(out int number)
-{
-  number = 10;
-}
-
-void AddOneToNumber(ref int number)
-{
-  ++number;
+  public string Name { get; init; }
+  public int Age { get; init; }
 }
