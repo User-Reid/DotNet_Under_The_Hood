@@ -12,3 +12,4 @@ C:\Users\aerma\Downloads\UT-Bootcamp\Udemy\C#\DotNet_Under_The_Hood\obj\Debug\ne
 C:\Users\aerma\Downloads\UT-Bootcamp\Udemy\C#\DotNet_Under_The_Hood\obj\Debug\net8.0\DotNet_Under_The_Hood.pdb
 C:\Users\aerma\Downloads\UT-Bootcamp\Udemy\C#\DotNet_Under_The_Hood\obj\Debug\net8.0\DotNet_Under_The_Hood.genruntimeconfig.cache
 C:\Users\aerma\Downloads\UT-Bootcamp\Udemy\C#\DotNet_Under_The_Hood\obj\Debug\net8.0\ref\DotNet_Under_The_Hood.dll
+C:\Users\aerma\Downloads\UT-Bootcamp\Udemy\C#\DotNet_Under_The_Hood\obj\Debug\net8.0\DotNet_Under_The_Hood.sourcelink.json
