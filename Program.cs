@@ -14,3 +14,5 @@ public class Person
   public string Name { get; init; }
   public int Age { get; init; }
 }
+
+// Understanding defragmentation. :)
