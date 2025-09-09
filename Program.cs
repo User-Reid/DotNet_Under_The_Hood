@@ -1,28 +1,20 @@
 ﻿int number = 5;
-var john = new Person { Name = "John", Age = 34 };
 
-AddOneToNumber(number);
-AddOneToPersonsAge(john);
+AddOneToNumber(ref number);
 
-System.Console.WriteLine($"{number}, {john.Age}");
+System.Console.WriteLine(number);
 
+MethodWithOutParamater(out int otherNumber);
+System.Console.WriteLine($"Other number is {otherNumber}");
 
 Console.ReadKey();
 
-void AddOneToNumber(int number)
+void MethodWithOutParamater(out int number)
 {
-  ++number;
+  number = 10;
 }
 
-// void AddOneToPersonsAge(Person person)
-// {
-//   ++person.Age;
-// }
-
-Person AddOneToPersonsAge(Person person) => new Person { Name = person.Name, Age = person.Age + 1 };
-
-public class Person
+void AddOneToNumber(ref int number)
 {
-  public string Name { get; init; }
-  public int Age { get; init; }
+  ++number;
 }
