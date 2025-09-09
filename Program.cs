@@ -1,8 +1,6 @@
 ﻿const string path = @"C:\Users\aerma\Downloads\sampleData.csv";
 var data = new CsvReader().Read(path);
 
-
-
 Console.ReadKey();
 
 public class CsvReader
