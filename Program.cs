@@ -1,6 +1,26 @@
 ﻿int number = 5;
-int anotherNumber = number;
-anotherNumber++;
+var john = new Person { Name = "John", Age = 34 };
 
-System.Console.WriteLine($"Number is {number}");
-System.Console.WriteLine($"another number is {anotherNumber}");
+AddOneToNumber(number);
+AddOneToPersonsAge(john);
+
+System.Console.WriteLine($"{number}, {john.Age}");
+
+
+Console.ReadKey();
+
+void AddOneToNumber(int number)
+{
+  ++number;
+}
+
+void AddOneToPersonsAge(Person person)
+{
+  ++person.Age;
+}
+
+public class Person
+{
+  public string Name { get; set; }
+  public int Age { get; set; }
+}
