@@ -1,26 +1,21 @@
-﻿for (var i = 0; i < 5; i++)
-{
-  var person = new Person { Name = "Shivay", Age = 37 };
-}
+﻿const string filePath = "file.txt";
+var writer = new FileWriter(filePath);
+writer.Write("Some text");
+writer.Write("Some other text");
 
-GC.Collect();
-System.Console.WriteLine("Ready to close.");
-
+System.Console.WriteLine("Press any key to close.");
 Console.ReadKey();
 
-class Person
+public class FileWriter
 {
-  public string Name { get; init; }
-  public int Age { get; init; }
-
-  ~Person()
+  private readonly StreamWriter _streamWriter;
+  public FileWriter(string filePath)
   {
-    System.Console.WriteLine($"Person called {Name} is being destructed.🔫");
+    _streamWriter = new StreamWriter(filePath, true);
   }
-
-  // protected override void Finalize()
-  // {
-  //   System.Console.WriteLine($"Person called {Name} is being destructed.🔫");
-  // }
+  public void Write(string text)
+  {
+    _streamWriter.WriteLine(text);
+    _streamWriter.Flush();
+  }
 }
-// going over the dispose method - introduction.
