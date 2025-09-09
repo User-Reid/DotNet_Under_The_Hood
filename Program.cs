@@ -1,4 +1,8 @@
-﻿var variousObjects = new List<object> {
+﻿int number = 5;
+var person = new Person { Name = "Ted", Age = 19 };
+object boxedNumber = number;
+
+var variousObjects = new List<object> {
   1,
   1.5m,
   new DateTime(2024, 6, 1),
