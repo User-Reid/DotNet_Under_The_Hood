@@ -1,18 +1,20 @@
-﻿bool flag = true;
-Person person = new Person();
-if (flag)
-{
-  string textInsideIf = "aaa";
-  person.Name = "Tom";
-}
+﻿bool someCondition = true;
 
-string text = "bbb";
+if (someCondition)
+{
+  var someClassInstance = new SomeClass();
+}
+var someClassInstance = new SomeClass();
+
+
+System.Console.WriteLine($"Count of all instances is now {SomeClass.CountOfInstances}");
 
 Console.ReadKey();
 
-public class Person
+public class SomeClass
 {
-  public string Name { get; init; }
-  public int Age { get; init; }
+  private static List<SomeClass> _allExistingInstances = new List<SomeClass>();
+  public static int CountOfInstances => _allExistingInstances.Count;
+
+  public SomeClass() => _allExistingInstances.Add(this);
 }
-// went over Garbage collector - generations of objects.
