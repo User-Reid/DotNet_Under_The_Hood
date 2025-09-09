@@ -1,20 +1,25 @@
-﻿bool someCondition = true;
-
-if (someCondition)
+﻿for (var i = 0; i < 5; i++)
 {
-  var someClassInstance = new SomeClass();
+  var person = new Person { Name = "Shivay", Age = 37 };
 }
-var someClassInstance = new SomeClass();
 
-
-System.Console.WriteLine($"Count of all instances is now {SomeClass.CountOfInstances}");
+GC.Collect();
+System.Console.WriteLine("Ready to close.");
 
 Console.ReadKey();
 
-public class SomeClass
+class Person
 {
-  private static List<SomeClass> _allExistingInstances = new List<SomeClass>();
-  public static int CountOfInstances => _allExistingInstances.Count;
+  public string Name { get; init; }
+  public int Age { get; init; }
 
-  public SomeClass() => _allExistingInstances.Add(this);
+  ~Person()
+  {
+    System.Console.WriteLine($"Person called {Name} is being destructed.🔫");
+  }
+
+  // protected override void Finalize()
+  // {
+  //   System.Console.WriteLine($"Person called {Name} is being destructed.🔫");
+  // }
 }
