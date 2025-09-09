@@ -23,3 +23,4 @@ class Person
   //   System.Console.WriteLine($"Person called {Name} is being destructed.🔫");
   // }
 }
+// going over the dispose method - introduction.
