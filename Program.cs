@@ -15,3 +15,4 @@ public class Person
   public string Name { get; init; }
   public int Age { get; init; }
 }
+// went over Garbage collector - generations of objects.
