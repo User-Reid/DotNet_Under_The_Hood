@@ -1,6 +1,11 @@
-﻿int number = 5;
+﻿using System.Collections;
+
+int number = 5;
 var person = new Person { Name = "Ted", Age = 19 };
 object boxedNumber = number;
+
+var numbers1 = new List<int> { 1, 2, 3, 4, 5 };
+var numbers2 = new ArrayList {1,2,3,4,5};
 
 var variousObjects = new List<object> {
   1,
